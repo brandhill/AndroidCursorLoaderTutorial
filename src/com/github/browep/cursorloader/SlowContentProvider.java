@@ -21,7 +21,7 @@ public class SlowContentProvider extends ContentProvider {
     public Cursor query(Uri uri, String[] strings, String s, String[] strings1, String s1) {
         try {
             Log.i(TAG,"sleeping");
-            Thread.sleep(3000);
+            Thread.sleep(500);
 
             MatrixCursor cursor = new MatrixCursor(new String[]{"_id","col1"});
             for(String name : new String[]{"poodle","labrador","german shephard","boston terrier","hound"}){
